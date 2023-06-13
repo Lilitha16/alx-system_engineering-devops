@@ -1,2 +1,2 @@
 #!/bin/bash
-export BEST=School
+ls -t | grep School | awk 'BEGIN{BEST=0}{if($1>BEST)BEST=$1}END{print BEST}'
